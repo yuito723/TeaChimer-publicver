@@ -12,9 +12,9 @@
 　このPythonプログラムはGNU General Public License v3.0を適用しています。
 
 以下、著作権表示
-
+```
 Copyright Contributors to the TeaChimer project
-
+```
 著作権表示、終わり
 
 ## 動作要件
