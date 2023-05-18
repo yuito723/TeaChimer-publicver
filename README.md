@@ -10,9 +10,10 @@
 
 ## ライセンスについて
 　このPythonプログラムはGNU General Public License v3.0を適用しています。
+
 以下、著作権表示
 
-Copyright 2023 The TeaChimer Contributors
+Copyright Contributors to the TeaChimer project
 
 著作権表示、終わり
 
