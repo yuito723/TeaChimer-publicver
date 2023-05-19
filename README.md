@@ -3,7 +3,7 @@
 ![repo size](https://img.shields.io/github/repo-size/cyber-yuito723/TeaChimer-publicver?style=flat-square)
 ![downloads](https://img.shields.io/github/downloads/cyber-yuito723/TeaChimer-publicver/total?style=flat-square)
 
-**最終更新日：２０２３年５月１９日金曜日**
+**最終更新日：２０２３年５月１９日**
 # TeaChimer-publicver
 　職員室で教員を呼び出すためのPythonプログラム（GUIソフト）です。
 リポジトリは[こちら](https://github.com/cyber-yuito723/TeaChimer-publicver)です。
