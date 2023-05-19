@@ -6,7 +6,7 @@
 **最終更新日：２０２３年５月１９日金曜日**
 # TeaChimer-publicver
 　職員室で教員を呼び出すためのPythonプログラム（GUIソフト）です。
-リポジトリは[こちら](https://github.com/cyber-yuito723/TeaChimer-publicver)。
+リポジトリは[こちら](https://github.com/cyber-yuito723/TeaChimer-publicver)です。
 
 
 ## 概要
