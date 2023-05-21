@@ -7,8 +7,7 @@ class SoundBoard:
     def __init__(self, master):
         self.master = master
         self.master.title("TeaChimer-pulicver-0.10")
-        #icon_parh = './logo/logo3.ico'
-        root.iconbitmap("./system/logo3.ico")
+        root.iconbitmap(default="TeaChimer-publicver-0.10_dev\system\logo3.ico")
         #self.master.iconbitmap('.\TeaChimer-publicver-0.10_dev\system\logo3.ico')
 #       self.master.geometry("")
 #       self.master.resizable(False, False)
