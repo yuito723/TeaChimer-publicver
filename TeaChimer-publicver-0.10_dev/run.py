@@ -7,19 +7,19 @@ class SoundBoard:
     def __init__(self, master):
         self.master = master
         self.master.title("TeaChimer-pulicver-0.10")
-        root.iconbitmap(default="TeaChimer-publicver-0.10_dev\system\logo3.ico")
-        #self.master.iconbitmap('.\TeaChimer-publicver-0.10_dev\system\logo3.ico')
+        self.master.iconbitmap('./TeaChimer-publicver-0.10_dev/system/logo3.ico')
 #       self.master.geometry("")
 #       self.master.resizable(False, False)
-#       self.master.attributes("-fullscreen", True)
+        self.master.attributes("-fullscreen", True)
+        
+        self.master.configure(background="white")
 
         self.notebook = ttk.Notebook(self.master)
         self.notebook.pack(fill=tk.BOTH, expand=True)
 
         style = ttk.Style()
-        style.configure('Custom.TNotebook.Tab', padding=(30,30), font=('Noto Sans JP', 25))
-        #style.configure.grid_rowconfigure(0, weight=0)
-        #style.configure.grid_columnconfigure(0, weight=1)
+        style.configure('Custom.TNotebook.Tab', color="red", padding=(30,30), font=('Noto Sans JP', 25),)
+        style.configure('Custom.TNotebook', background="white")
         self.notebook.configure(style='Custom.TNotebook')
 
         self.create_page1()
@@ -36,7 +36,7 @@ class SoundBoard:
         self.create_navigation_frame()
 
     def create_page1(self):
-        page1 = tk.Frame(self.notebook)
+        page1 = tk.Frame(self.notebook, background="white")
         self.notebook.add(page1, text="あ行")
         tk.Button(page1, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
         tk.Button(page1, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
@@ -80,7 +80,7 @@ class SoundBoard:
         page1.grid_columnconfigure(4, weight=1)
 
     def create_page2(self):
-        page2 = tk.Frame(self.notebook)
+        page2 = tk.Frame(self.notebook, background="white")
         self.notebook.add(page2, text="か行")
         tk.Button(page2, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
         tk.Button(page2, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
@@ -124,7 +124,7 @@ class SoundBoard:
         page2.grid_columnconfigure(4, weight=1)
 
     def create_page3(self):
-        page3 = tk.Frame(self.notebook)
+        page3 = tk.Frame(self.notebook, background="white")
         self.notebook.add(page3, text="さ行")
         tk.Button(page3, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
         tk.Button(page3, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
@@ -168,7 +168,7 @@ class SoundBoard:
         page3.grid_columnconfigure(4, weight=1)
 
     def create_page4(self):
-        page4 = tk.Frame(self.notebook)
+        page4 = tk.Frame(self.notebook, background="white")
         self.notebook.add(page4, text="た行")
         tk.Button(page4, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
         tk.Button(page4, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
@@ -212,7 +212,7 @@ class SoundBoard:
         page4.grid_columnconfigure(4, weight=1)
 
     def create_page5(self):
-        page5 = tk.Frame(self.notebook)
+        page5 = tk.Frame(self.notebook, background="white")
         self.notebook.add(page5, text="な行")
         tk.Button(page5, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
         tk.Button(page5, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
@@ -256,7 +256,7 @@ class SoundBoard:
         page5.grid_columnconfigure(4, weight=1)
 
     def create_page6(self):
-        page6 = tk.Frame(self.notebook)
+        page6 = tk.Frame(self.notebook, background="white")
         self.notebook.add(page6, text="は行")
         tk.Button(page6, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
         tk.Button(page6, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
@@ -300,7 +300,7 @@ class SoundBoard:
         page6.grid_columnconfigure(4, weight=1)
 
     def create_page7(self):
-        page7 = tk.Frame(self.notebook)
+        page7 = tk.Frame(self.notebook, background="white")
         self.notebook.add(page7, text="ま行")
         tk.Button(page7, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
         tk.Button(page7, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
@@ -344,7 +344,7 @@ class SoundBoard:
         page7.grid_columnconfigure(4, weight=1)
 
     def create_page8(self):
-        page8 = tk.Frame(self.notebook)
+        page8 = tk.Frame(self.notebook, background="white")
         self.notebook.add(page8, text="や行")
         tk.Button(page8, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
         tk.Button(page8, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
@@ -388,7 +388,7 @@ class SoundBoard:
         page8.grid_columnconfigure(4, weight=1)
 
     def create_page9(self):
-        page9 = tk.Frame(self.notebook)
+        page9 = tk.Frame(self.notebook, background="white")
         self.notebook.add(page9, text="ら行")
         tk.Button(page9, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
         tk.Button(page9, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
@@ -432,7 +432,7 @@ class SoundBoard:
         page9.grid_columnconfigure(4, weight=1)
 
     def create_page10(self):
-        page10 = tk.Frame(self.notebook)
+        page10 = tk.Frame(self.notebook, background="white")
         self.notebook.add(page10, text="わ行")
         tk.Button(page10, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
         tk.Button(page10, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("")).grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
@@ -476,11 +476,11 @@ class SoundBoard:
         page10.grid_columnconfigure(4, weight=1)
 
     def create_navigation_frame(self):
-        frame = tk.Frame(self.master)
+        frame = tk.Frame(self.master, background="white")
         frame.pack()
-        tk.Button(frame, text="終了する", font=("Noto Sans JP", 20), width=10, height=3, command=self.confirm_exit).grid(row=0, column=0, padx=5, pady=5)
-        tk.Message(frame, text="Hello", font=("Noto Sans JP", 20)).grid(row=0, column=1, padx=5, pady=5)
-        #tk.Image(frame,"./")
+        #tk.PhotoImage(file="./logo/logo3_250.png", width=500, height=500)
+        tk.Message(frame, text="先生の名前のボタンをタッチすると呼び出し音声が流れます。 音声が流れている間は他のボタンを押さないでください。 終了ボタンを押してアプリを終了させないでください。", background="white", font=("Noto Sans JP", 20), width=1000).grid(row=0, column=0, padx=5, pady=5)
+        tk.Button(frame, text="終了する", font=("Noto Sans JP", 20), width=10, height=3, command=self.confirm_exit).grid(row=0, column=1, padx=5, pady=5)
 
     def confirm_exit(self):
         result = mbox.askquestion("終了する", "TeaChimerを終了しますか？", icon="warning")
@@ -494,4 +494,5 @@ class SoundBoard:
 
 root = tk.Tk()
 app = SoundBoard(root)
+root.protocol("WM_DELETE_WINDOW", app.confirm_exit)
 root.mainloop()
