@@ -500,9 +500,8 @@ class SoundBoard:
     def create_navigation_frame(self):
         frame = tk.Frame(self.master, background="white")
         frame.pack()
-        tk.Button(frame, text="終了する", font=("Noto Sans JP", 20), width=10, height=3, command=self.confirm_exit).grid(row=0, column=1, padx=5, pady=5)
-        tk.Message(frame, text="先生の名前のボタンをタッチすると呼び出し音声が流れます。 音声が流れている間は他のボタンを押さないでください。 終了ボタンを押してアプリを終了させないでください。", background="white", font=("Noto Sans JP", 20), width=1000).grid(row=0, column=0, padx=5, pady=5)
-        tk.Message(frame, text="©️ 2023 Contributors to the TeaChimer project", background="white", font=("Noto Sans JP", 20), width=1000).grid(row=0, column=0, padx=5, pady=5)
+        tk.Button(frame, text="終了する", font=("Noto Sans JP", 20), width=10, height=3, command=self.confirm_exit).grid(row=0, column=0, padx=5, pady=5)
+        tk.Message(frame, text="音声が流れている間は他のボタンを押さないでください。 終了ボタンを押してアプリを終了させないでください。", background="white", font=("Noto Sans JP", 20), width="1000").grid(row=0, column=1, padx=5, pady=5)
 
     def confirm_exit(self):
         result = mbox.askquestion("終了する", "TeaChimerを終了しますか？", icon="warning")
