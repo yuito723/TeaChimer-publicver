@@ -21,3 +21,16 @@ class SoundBoard:
         style.configure('Custom.TNotebook.Tab', color="red", padding=(30,10), font=('Noto Sans JP', 25))
         style.configure('Custom.TNotebook', background="white")
         self.notebook.configure(style='Custom.TNotebook')
+
+        self.create_page1()
+        self.create_page2()
+        self.create_page3()
+        self.create_page4()
+        self.create_page5()
+        self.create_page6()
+        self.create_page7()
+        self.create_page8()
+        self.create_page9()
+        self.create_page10()
+
+        self.create_navigation_frame()
