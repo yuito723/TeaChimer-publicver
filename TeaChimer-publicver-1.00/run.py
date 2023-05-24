@@ -18,6 +18,6 @@ class SoundBoard:
         self.notebook.pack(fill=tk.BOTH, expand=True)
         
         style = ttk.Style()
-        style.configure('Custom.TNotebook.Tab', color="red", padding=(30,10), font=('Noto Sans JP', 25),)
+        style.configure('Custom.TNotebook.Tab', color="red", padding=(30,10), font=('Noto Sans JP', 25))
         style.configure('Custom.TNotebook', background="white")
         self.notebook.configure(style='Custom.TNotebook')
