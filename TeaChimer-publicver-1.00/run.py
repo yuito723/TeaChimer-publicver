@@ -10,4 +10,5 @@ import pygame
 class SoundBoard:
     def __init__(self, master):
         self.master = master
-        self.master.title("TeaChimer-publicver-1.00")
+        self.master.title("TeaChimer-pulicver-1.00")
+        self.master.attributes("-fullscreen", True)
