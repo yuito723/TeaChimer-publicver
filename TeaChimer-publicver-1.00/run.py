@@ -34,3 +34,12 @@ class SoundBoard:
         self.create_page10()
 
         self.create_navigation_frame()
+
+    def create_page1(self):
+        page1 = tk.Frame(self.notebook, background="white")
+        self.notebook.add(page1, text="あ行")
+        tk.Button(page1, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("./system/sample.wav")).grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
+        tk.Button(page1, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("./system/sample.wav")).grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
+        tk.Button(page1, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("./system/sample.wav")).grid(row=0, column=2, padx=5, pady=5, sticky="nsew")
+        tk.Button(page1, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("./system/sample.wav")).grid(row=0, column=3, padx=5, pady=5, sticky="nsew")
+        tk.Button(page1, text="先生", font=("Noto Sans JP", 20), width=10, height=3, command=lambda: self.play_sound("./system/sample.wav")).grid(row=0, column=4, padx=5, pady=5, sticky="nsew")
