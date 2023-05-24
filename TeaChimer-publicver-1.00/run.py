@@ -515,6 +515,6 @@ class SoundBoard:
 
 root = tk.Tk()
 app = SoundBoard(root)
-mbox.showinfo("ライセンスについて", "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます。\n©️ 2023 Contributors to the TeaChimer project.")
+mbox.showinfo("ライセンスについて", "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます。\n©️ 2023 Contributors to the TeaChimer project.\nまた、このプログラムに含まれる音声データは\nVOICEVOXで作成したずんだもんの音声を使用しています。")
 root.protocol("WM_DELETE_WINDOW", app.confirm_exit)
 root.mainloop()
