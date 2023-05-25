@@ -35,7 +35,7 @@ class SoundBoard:
     def __init__(self, master):
         self.master = master
         self.master.title("TeaChimer-pulicver-v1.0.0")
-        self.master.attributes("-fullscreen", True)
+        #self.master.attributes("-fullscreen", True)
         self.master.configure(background="white")
 
         self.notebook = ttk.Notebook(self.master)
