@@ -1,4 +1,6 @@
 ################################################
+#          TeaChimer-publicver-v1.0.0          #
+################################################
 # ©️ 2023 Contributors to the TeaChimer project #
 ################################################
 # TeaChimer is free software:                  #
@@ -32,7 +34,7 @@ import pygame
 class SoundBoard:
     def __init__(self, master):
         self.master = master
-        self.master.title("TeaChimer-pulicver-1.00")
+        self.master.title("TeaChimer-pulicver-v1.0.0")
         self.master.attributes("-fullscreen", True)
         self.master.configure(background="white")
 
