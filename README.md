@@ -3,7 +3,7 @@
 ![repo size](https://img.shields.io/github/repo-size/cyber-yuito723/TeaChimer-publicver?style=flat-square)
 ![downloads](https://img.shields.io/github/downloads/cyber-yuito723/TeaChimer-publicver/total?style=flat-square)
 
-**最終更新日：２０２３年５月１９日**
+**最終更新日：２０２３年５月２６日**
 # TeaChimer-publicver
 　職員室で教員を呼び出すためのPythonプログラム（GUIソフト）です。
 リポジトリは[こちら](https://github.com/cyber-yuito723/TeaChimer-publicver)です。
@@ -17,31 +17,18 @@
 
 
 ## ライセンスについて
-　このPythonプログラムは、オープンソースソフトウェアであり、[GNU General Public License v3.0](./LICENSE)を適用させています。
-
-以下、著作権表示です。
+　このPythonプログラムは、オープンソースソフトウェアであり、[GNU General Public License v3.0](./LICENSE)に基づいて再配布したり改変したりできます。
+また、利用する場合は以下のクレジット表記を追加してください。
 
 `©️ 2023 Contributors to the TeaChimer project`
 
-著作権表示、終わり。
-
 
 ## 動作要件
-　このPythonプログラムは、Python3で記述されたものであり、マルチプラットフォーム対応です。
+　各リリースのリリースノートを確認してください。
 
-* コンピューターのOSはGUI環境であること。
-* コンピューターにPython3がインストールされていること。
-* コンピューターにtkinterとpygameのPython3モジュールがインストールされていること。
-
-※このプログラムは現在開発中であり、これらは予告なしに変更になる場合があります。
-
-### 推奨要件
+### 推奨動作要件
 * コンピューターはノートパソコン、又はタブレット端末で、搭載されているディスプレイは指でのタッチ操作対応であること。（タッチ操作での使用が望ましい。）
 
 
-## 使用方法
-※現在、開発中です。正式リリースまでお待ちください。
-
-
 ## お問い合わせ
-※現在、開発中です。正式リリースまでお待ちください。
+※現在、準備中です。
