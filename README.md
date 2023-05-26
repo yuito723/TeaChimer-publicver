@@ -1,4 +1,4 @@
-![logo](./logo/logo1.svg)
+![logo](https://github.com/cyber-yuito723/TeaChimer-publicver/blob/main/logo/logo1.svg)
 ![last commit](https://img.shields.io/github/last-commit/cyber-yuito723/TeaChimer-publicver?style=flat-square)
 ![repo size](https://img.shields.io/github/repo-size/cyber-yuito723/TeaChimer-publicver?style=flat-square)
 ![downloads](https://img.shields.io/github/downloads/cyber-yuito723/TeaChimer-publicver/total?style=flat-square)
@@ -17,7 +17,7 @@
 
 
 ## ライセンスについて
-　このPythonプログラムは、オープンソースソフトウェアであり、[GNU General Public License v3.0](./LICENSE)に基づいて再配布したり改変したりできます。
+　このPythonプログラムは、オープンソースソフトウェアであり、[GNU General Public License v3.0](https://github.com/cyber-yuito723/TeaChimer-publicver/blob/main/LICENSE)に基づいて再配布したり改変したりできます。
 また、GPLライセンスのため、利用する場合は以下のクレジット表記を追加してください。
 ```
 ©️ 2023 Contributors to the TeaChimer project
@@ -27,7 +27,7 @@
 ## リリース
 |バージョン|リリース日時|
 |:---:|:---:|
-|[v1.0.0](./releases/tag/v1.0.0)|２０２３年５月２６日
+|[v1.0.0](https://github.com/cyber-yuito723/TeaChimer-publicver/releases/tag/v1.0.0)|２０２３年５月２６日|
 
 
 ## 動作要件
