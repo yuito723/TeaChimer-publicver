@@ -1,4 +1,4 @@
-![logo](https://github.com/cyber-yuito723/TeaChimer-publicver/blob/main/logo/logo1.svg)
+![logo](./logo/logo1.svg)
 ![last commit](https://img.shields.io/github/last-commit/cyber-yuito723/TeaChimer-publicver?style=flat-square)
 ![repo size](https://img.shields.io/github/repo-size/cyber-yuito723/TeaChimer-publicver?style=flat-square)
 ![downloads](https://img.shields.io/github/downloads/cyber-yuito723/TeaChimer-publicver/total?style=flat-square)
