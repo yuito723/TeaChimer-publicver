@@ -506,8 +506,8 @@ class SoundBoard:
         tk.Message(frame, text="音声が流れている間は他のボタンを押さないでください。 終了ボタンを押してアプリを終了させないでください。", background="white", font=("Noto Sans JP", 20), width="1000").grid(row=0, column=1, padx=5, pady=5)
 
     def confirm_exit(self):
-        result = mbox.askquestion("終了する", "TeaChimerを終了しますか？", icon="warning")
-        if result == "yes":
+        result = mbox.askyesno("終了する", "TeaChimerを終了しますか？", icon="warning")
+        if result:
             self.master.destroy()
 
     def play_sound(self, file):
