@@ -1,5 +1,5 @@
 ################################################
-#          TeaChimer-publicver-v1.0.0          #
+#          TeaChimer-publicver-v1.1.0(beta)    #
 ################################################
 # ©️ 2023 Contributors to the TeaChimer project #
 ################################################
@@ -27,12 +27,12 @@
 ################################################
 #ライセンスについて
 ################################################
-#TeaChimerはオープンソースソフトウェアであり、
-#GNU General Public License v3.0に基づいて
-#再配布したり改変したりできます。
-#©️ 2023 Contributors to the TeaChimer project.
-#また、このプログラムに付属している音声データは、
-#VOICEVOXで作成したずんだもんの音声を使用しています。
+# TeaChimerはオープンソースソフトウェアであり、
+# GNU General Public License v3.0に基づいて
+# 再配布したり改変したりできます。
+# ©️ 2023 Contributors to the TeaChimer project.
+# また、このプログラムに付属している音声データは、
+# VOICEVOXで作成したずんだもんの音声を使用しています。
 ################################################
 
 import tkinter as tk
@@ -43,7 +43,7 @@ import pygame
 class SoundBoard:
     def __init__(self, master):
         self.master = master
-        self.master.title("TeaChimer-pulicver-v1.0.0")
+        self.master.title("TeaChimer-pulicver-v1.1.0(beta)")
         self.master.attributes("-fullscreen", True)
         self.master.configure(background="white")
 
@@ -513,6 +513,8 @@ class SoundBoard:
     def create_navigation_frame(self):
         frame = tk.Frame(self.master, background="white")
         frame.pack()
+        #canvas = tk.Canvas(width=20, height=10)
+        #tk.PhotoImage(frame, )  #.grid(row=0, column=1, padx=5, pady=5)
         tk.Message(frame, text="音声が流れている間は他のボタンを押さないでください。", background="white", font=("Noto Sans JP", 20), width="1000").grid(row=0, column=1, padx=5, pady=5)
 
     def key_exit(self):
@@ -530,7 +532,6 @@ class SoundBoard:
 
 root = tk.Tk()
 app = SoundBoard(root)
-root.protocol("WM_DELETE_WINDOW", app.confirm_exit)
 root.mainloop()
 
 ####################################################################################################
@@ -547,7 +548,7 @@ root.mainloop()
 #「mbox.showinfo("ライセンスについて", "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます。\n©️ 2023 Contributors to the TeaChimer project.\nまた、このプログラムに付属している音声データは、\nVOICEVOXで作成したずんだもんの音声を使用しています。")」
 #を削除しました。
 #
-#
-#
-#
+#最後の
+#「root.protocol("WM_DELETE_WINDOW", app.confirm_exit)」
+#を削除しました。
 ####################################################################################################
