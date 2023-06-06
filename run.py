@@ -25,6 +25,15 @@
 # along with this program. If not, see         #
 # <https://www.gnu.org/licenses/>.             #
 ################################################
+#ライセンスについて
+################################################
+#TeaChimerはオープンソースソフトウェアであり、
+#GNU General Public License v3.0に基づいて
+#再配布したり改変したりできます。
+#©️ 2023 Contributors to the TeaChimer project.
+#また、このプログラムに付属している音声データは、
+#VOICEVOXで作成したずんだもんの音声を使用しています。
+################################################
 
 import tkinter as tk
 import tkinter.ttk as ttk
@@ -58,6 +67,8 @@ class SoundBoard:
         self.create_page10()
 
         self.create_navigation_frame()
+
+        self.key_exit()
 
     def create_page1(self):
         page1 = tk.Frame(self.notebook, background="white")
@@ -502,10 +513,12 @@ class SoundBoard:
     def create_navigation_frame(self):
         frame = tk.Frame(self.master, background="white")
         frame.pack()
-        tk.Button(frame, text="終了する", font=("Noto Sans JP", 20), width=10, height=3, command=self.confirm_exit).grid(row=0, column=0, padx=5, pady=5)
-        tk.Message(frame, text="音声が流れている間は他のボタンを押さないでください。 終了ボタンを押してアプリを終了させないでください。", background="white", font=("Noto Sans JP", 20), width="1000").grid(row=0, column=1, padx=5, pady=5)
+        tk.Message(frame, text="音声が流れている間は他のボタンを押さないでください。", background="white", font=("Noto Sans JP", 20), width="1000").grid(row=0, column=1, padx=5, pady=5)
 
-    def confirm_exit(self):
+    def key_exit(self):
+        self.master.bind("<Control-e>", self.confirm_exit)
+
+    def confirm_exit(self ,event):
         result = mbox.askyesno("終了する", "TeaChimerを終了しますか？", icon="warning")
         if result:
             self.master.destroy()
@@ -517,6 +530,24 @@ class SoundBoard:
 
 root = tk.Tk()
 app = SoundBoard(root)
-mbox.showinfo("ライセンスについて", "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます。\n©️ 2023 Contributors to the TeaChimer project.\nまた、このプログラムに付属している音声データは、\nVOICEVOXで作成したずんだもんの音声を使用しています。")
 root.protocol("WM_DELETE_WINDOW", app.confirm_exit)
 root.mainloop()
+
+####################################################################################################
+# 変更ログ
+####################################################################################################
+#「def confirm_exit(self):」内のresult = mbox.askquestionをresult = mbox.askyesnoに変更しました。
+#
+#「tk.Button(frame, text="終了する", font=("Noto Sans JP", 20), width=10, height=3, command=self.confirm_exit).grid(row=0, column=0, padx=5, pady=5)」
+#を削除しました。
+#
+#ナビゲーションフレーム内の「 終了ボタンを押してアプリを終了させないでください。」を削除しました。
+#
+#最後の
+#「mbox.showinfo("ライセンスについて", "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます。\n©️ 2023 Contributors to the TeaChimer project.\nまた、このプログラムに付属している音声データは、\nVOICEVOXで作成したずんだもんの音声を使用しています。")」
+#を削除しました。
+#
+#
+#
+#
+####################################################################################################
