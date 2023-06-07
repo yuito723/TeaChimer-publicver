@@ -43,7 +43,7 @@ from tkinter import PhotoImage
 
 def show_dialog():
     dialog = tk.Toplevel(root)
-    dialog.title("ダイアログ")
+    dialog.title("TeaChimer-publicver-v1.1.0(beta)")
 
     def close_dialog():
         dialog.destroy()
