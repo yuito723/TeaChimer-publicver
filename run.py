@@ -39,6 +39,29 @@ import tkinter as tk
 import tkinter.ttk as ttk
 import tkinter.messagebox as mbox
 import pygame
+from tkinter import PhotoImage
+
+def show_dialog():
+    dialog = tk.Toplevel(root)
+    dialog.title("ダイアログ")
+
+    def close_dialog():
+        dialog.destroy()
+
+    # 画像の読み込み
+    image = PhotoImage(file="./logo/logo1.png")
+    
+    # ラベルに画像を表示
+    label = tk.Label(dialog, image=image)
+    label.pack()
+
+    ok_button = tk.Button(dialog, text="OK", command=close_dialog)
+    ok_button.pack()
+    
+    # ダイアログを表示
+    dialog.transient(root)
+    dialog.grab_set()
+    root.wait_window(dialog)
 
 class SoundBoard:
     def __init__(self, master):
@@ -69,6 +92,7 @@ class SoundBoard:
         self.create_navigation_frame()
 
         self.key_exit()
+
 
     def create_page1(self):
         page1 = tk.Frame(self.notebook, background="white")
@@ -513,15 +537,13 @@ class SoundBoard:
     def create_navigation_frame(self):
         frame = tk.Frame(self.master, background="white")
         frame.pack()
-        #canvas = tk.Canvas(width=20, height=10)
-        #tk.PhotoImage(frame, )  #.grid(row=0, column=1, padx=5, pady=5)
         tk.Message(frame, text="音声が流れている間は他のボタンを押さないでください。", background="white", font=("Noto Sans JP", 20), width="1000").grid(row=0, column=1, padx=5, pady=5)
 
     def key_exit(self):
         self.master.bind("<Control-e>", self.confirm_exit)
 
     def confirm_exit(self ,event):
-        result = mbox.askyesno("終了する", "TeaChimerを終了しますか？", icon="warning")
+        result = mbox.askyesno("終了する", "TeaChimerを終了しますか？")
         if result:
             self.master.destroy()
 
@@ -531,6 +553,7 @@ class SoundBoard:
         pygame.mixer.music.play()
 
 root = tk.Tk()
+show_dialog()
 app = SoundBoard(root)
 root.mainloop()
 
@@ -551,4 +574,6 @@ root.mainloop()
 #最後の
 #「root.protocol("WM_DELETE_WINDOW", app.confirm_exit)」
 #を削除しました。
+#
+#
 ####################################################################################################
