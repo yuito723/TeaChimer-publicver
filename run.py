@@ -41,24 +41,24 @@ import tkinter.messagebox as mbox
 import pygame
 from tkinter import PhotoImage
 
-def show_dialog():
+def show_opening():
     dialog = tk.Toplevel(root)
     dialog.title("TeaChimer-publicver-v1.1.0(beta)")
 
-    def close_dialog():
+    def close_opening():
         dialog.destroy()
 
-    # 画像の読み込み
-    image = PhotoImage(file="./logo/logo1.png")
-    
-    # ラベルに画像を表示
+    image = PhotoImage(file="./logo/s-logo1.png")
+
     label = tk.Label(dialog, image=image)
     label.pack()
+
+    text_label = tk.Label(dialog, text="TeaChimerはオープンソースソフトウェアであり、 GNU General Public License v3.0に基づいて 再配布したり改変したりできます。 ©️ 2023 Contributors to the TeaChimer project. また、このプログラムに付属している音声データは、 VOICEVOXで作成したずんだもんの音声を使用しています。")
+    text_label.pack()
 
     ok_button = tk.Button(dialog, text="OK", command=close_dialog)
     ok_button.pack()
     
-    # ダイアログを表示
     dialog.transient(root)
     dialog.grab_set()
     root.wait_window(dialog)
@@ -553,7 +553,7 @@ class SoundBoard:
         pygame.mixer.music.play()
 
 root = tk.Tk()
-show_dialog()
+show_opening()
 app = SoundBoard(root)
 root.mainloop()
 
