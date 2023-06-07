@@ -39,29 +39,49 @@ import tkinter as tk
 import tkinter.ttk as ttk
 import tkinter.messagebox as mbox
 import pygame
-from tkinter import PhotoImage
+#from tkinter import PhotoImage
 
-def show_opening():
-    dialog = tk.Toplevel(root)
-    dialog.title("TeaChimer-publicver-v1.1.0(beta)")
+    #window = tk.Tk()
+    #window.title("TeaChimer-publicver-v1.1.0(beta)")
 
-    def close_opening():
-        dialog.destroy()
+    #image = tk.PhotoImage(file="./logo/s-logo1.png")
+    #image_label = tk.Label(window, image=image)
+    #image_label.pack()
 
-    image = PhotoImage(file="./logo/s-logo1.png")
+    #text = "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます。\n©️ 2023 Contributors to the TeaChimer project.\nまた、このプログラムに付属している音声データは、\nVOICEVOXで作成したずんだもんの音声を使用しています。"
+    #text_label =tk.Label(window, text=text)
+    #text_label.pack()
 
-    label = tk.Label(dialog, image=image)
-    label.pack()
+    #ok_button = tk.Button(window, text="OK", command=close_opening)
+    #ok_button.pack()
 
-    text_label = tk.Label(dialog, text="TeaChimerはオープンソースソフトウェアであり、 GNU General Public License v3.0に基づいて 再配布したり改変したりできます。 ©️ 2023 Contributors to the TeaChimer project. また、このプログラムに付属している音声データは、 VOICEVOXで作成したずんだもんの音声を使用しています。")
-    text_label.pack()
+    #window.transient(root)
+    #window.grab_set()
+    #root.wait_window(window)
 
-    ok_button = tk.Button(dialog, text="OK", command=close_dialog)
-    ok_button.pack()
+    #root.mainloop()
+
+
+    #dialog = tk.Toplevel(root)
+    #dialog.title("TeaChimer-publicver-v1.1.0(beta)")
+
+    #def close_opening():
+    #    dialog.destroy()
+
+    #image = PhotoImage(file="./logo/s-logo1.png")
+
+    #label = tk.Label(dialog, image=image)
+    #label.pack()
+
+    #text_label = tk.Label(dialog, text="TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます。\n©️ 2023 Contributors to the TeaChimer project.\nまた、このプログラムに付属している音声データは、\nVOICEVOXで作成したずんだもんの音声を使用しています。")
+    #text_label.pack()
+
+    #ok_button = tk.Button(dialog, text="OK", command=close_opening)
+    #ok_button.pack()
     
-    dialog.transient(root)
-    dialog.grab_set()
-    root.wait_window(dialog)
+    #dialog.transient(root)
+    #dialog.grab_set()
+    #root.wait_window(dialog)
 
 class SoundBoard:
     def __init__(self, master):
@@ -93,6 +113,9 @@ class SoundBoard:
 
         self.key_exit()
 
+    def show_opening():
+        def close_opening():
+            window.destroy()
 
     def create_page1(self):
         page1 = tk.Frame(self.notebook, background="white")
@@ -553,8 +576,8 @@ class SoundBoard:
         pygame.mixer.music.play()
 
 root = tk.Tk()
-show_opening()
 app = SoundBoard(root)
+#show_opening()
 root.mainloop()
 
 ####################################################################################################
