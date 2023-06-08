@@ -41,25 +41,13 @@ import tkinter.messagebox as mbox
 import pygame
 #from tkinter import PhotoImage
 
-    #window = tk.Tk()
-    #window.title("TeaChimer-publicver-v1.1.0(beta)")
-
-    #image = tk.PhotoImage(file="./logo/s-logo1.png")
-    #image_label = tk.Label(window, image=image)
-    #image_label.pack()
-
-    #text = "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます。\n©️ 2023 Contributors to the TeaChimer project.\nまた、このプログラムに付属している音声データは、\nVOICEVOXで作成したずんだもんの音声を使用しています。"
-    #text_label =tk.Label(window, text=text)
-    #text_label.pack()
-
-    #ok_button = tk.Button(window, text="OK", command=close_opening)
-    #ok_button.pack()
+    
+    ok_button = tk.Button(window, text="OK", command=close_opening)
+    ok_button.pack()
 
     #window.transient(root)
     #window.grab_set()
     #root.wait_window(window)
-
-    #root.mainloop()
 
 ####################################################################################################################################################
 ####################################################################################################################################################
@@ -118,6 +106,20 @@ class SoundBoard:
     def show_opening():
         def close_opening():
             window.destroy()
+
+        window = tk.Tk()
+        window.title("TeaChimer-publicver-v1.1.0(beta)")
+
+        image = tk.PhotoImage(file="./logo/s-logo1.png")
+        image_label = tk.Label(window, image=image)
+        image_label.pack()
+
+        text = "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます。\n©️ 2023 Contributors to the TeaChimer project.\nまた、このプログラムに付属している音声データは、\nVOICEVOXで作成したずんだもんの音声を使用しています。"
+        text_label =tk.Label(window, text=text)
+        text_label.pack()
+
+        ok_button = tk.Button(window, text="OK", command=close_opening)
+        ok_button.pack()
 
     def create_page1(self):
         page1 = tk.Frame(self.notebook, background="white")
