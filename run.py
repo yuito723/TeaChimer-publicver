@@ -48,6 +48,7 @@ class SoundBoard:
         self.master.title("TeaChimer-pulicver-v1.1.0(beta)")
         self.master.attributes("-fullscreen", True)
         self.master.configure(background="white")
+        self.master.iconbitmap(default="./logo/logo3.ico")
         self.master.focus_force()
 
         self.notebook = ttk.Notebook(self.master)
