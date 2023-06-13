@@ -39,16 +39,7 @@ import tkinter as tk
 import tkinter.ttk as ttk
 import tkinter.messagebox as mbox
 import pygame
-#from tkinter import PhotoImage
-
-####################################################################################################
-####################################################################################################
-    #def show_window():
-    #    text = "Your Text"
-    #    text_label = tk.Label(sub, text=text)
-    #    text_label.pack()
-####################################################################################################
-####################################################################################################
+import math
 
 class SoundBoard:
     def __init__(self, master):
@@ -56,6 +47,7 @@ class SoundBoard:
         self.master.title("TeaChimer-pulicver-v1.1.0(beta)")
         self.master.attributes("-fullscreen", True)
         self.master.configure(background="white")
+        self.master.focus_force()
 
         self.notebook = ttk.Notebook(self.master)
         self.notebook.pack(fill=tk.BOTH, expand=True)
@@ -84,22 +76,30 @@ class SoundBoard:
 
     def info(self):
         sub = tk.Toplevel(self.master)
-        sub.title("TeaChimer-pulicver-v1.1.0(beta)")    
+        sub.title("TeaChimer-pulicver-v1.1.0(beta)")
+        sub.overrideredirect(True)
+        sub.attributes("-topmost", True)
+        sub.attributes("-alpha", 0.75)
         sub.configure(background="white")
-        sub.geometry("700x300")
-        sub.focus_force()
-        sub.lift()
 
+        window_width = 500
+        window_height = 250
+        screen_width = sub.winfo_screenwidth()
+        screen_height = sub.winfo_screenheight()
+        x = math.ceil((screen_width - window_width) / 2)
+        y = math.ceil((screen_height - window_height) / 2)
+        sub.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
-    #def show_opening():
+        sub.after(3000, sub.destroy)
 
-        #image = tk.PhotoImage(file="./logo/s-logo1.png")
-        #image_label = tk.Label(window, image=image)
-        #image_label.pack()
+        image = tk.PhotoImage(file="./logo/s-logo1.png")
+        image_label = tk.Label(sub, image=image, background="white")
+        image_label.image = image
+        image_label.pack()
 
-        #text = "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます。\n©️ 2023 Contributors to the TeaChimer project.\nまた、このプログラムに付属している音声データは、\nVOICEVOXで作成したずんだもんの音声を使用しています。"
-        #text_label =tk.Label(window, text=text)
-        #text_label.pack()
+        text = "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて再配布したり改変したりできます。\n(C) 2023 Contributors to the TeaChimer project.\nまた、このプログラムに付属している音声データは、\nVOICEVOXで作成したずんだもんの音声を使用しています。"
+        text_label = tk.Label(sub, text=text, background="white")
+        text_label.pack()
 
     def create_page1(self):
         page1 = tk.Frame(self.notebook, background="white")
@@ -562,24 +562,3 @@ class SoundBoard:
 root = tk.Tk()
 app = SoundBoard(root)
 root.mainloop()
-
-####################################################################################################
-# 変更ログ
-####################################################################################################
-#「def confirm_exit(self):」内のresult = mbox.askquestionをresult = mbox.askyesnoに変更しました。
-#
-#「tk.Button(frame, text="終了する", font=("Noto Sans JP", 20), width=10, height=3, command=self.confirm_exit).grid(row=0, column=0, padx=5, pady=5)」
-#を削除しました。
-#
-#ナビゲーションフレーム内の「 終了ボタンを押してアプリを終了させないでください。」を削除しました。
-#
-#最後の
-#「mbox.showinfo("ライセンスについて", "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます。\n©️ 2023 Contributors to the TeaChimer project.\nまた、このプログラムに付属している音声データは、\nVOICEVOXで作成したずんだもんの音声を使用しています。")」
-#を削除しました。
-#
-#最後の
-#「root.protocol("WM_DELETE_WINDOW", app.confirm_exit)」
-#を削除しました。
-#
-#
-####################################################################################################
