@@ -90,7 +90,7 @@ class SoundBoard:
         y = math.ceil((screen_height - window_height) / 2)
         sub.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
-        sub.after(3000, sub.destroy)
+        sub.after(5000, sub.destroy)
 
         image = tk.PhotoImage(file="./logo/s-logo1.png")
         image_label = tk.Label(sub, image=image, background="white")
