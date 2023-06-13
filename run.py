@@ -39,6 +39,7 @@ import tkinter as tk
 import tkinter.ttk as ttk
 import tkinter.messagebox as mbox
 import pygame
+import time
 import math
 
 class SoundBoard:
@@ -557,6 +558,8 @@ class SoundBoard:
     def play_sound(self, file):
         pygame.mixer.init()
         pygame.mixer.music.load(file)
+        pygame.mixer.music.play()
+        time.sleep(3)
         pygame.mixer.music.play()
 
 root = tk.Tk()
