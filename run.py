@@ -1,5 +1,5 @@
 ################################################
-#          TeaChimer-publicver-v1.1.0(beta)    #
+#          TeaChimer-publicver-v1.1.0          #
 ################################################
 # ©️ 2023 Contributors to the TeaChimer project #
 ################################################
@@ -45,7 +45,7 @@ import math
 class SoundBoard:
     def __init__(self, master):
         self.master = master
-        self.master.title("TeaChimer-pulicver-v1.1.0(beta)")
+        self.master.title("TeaChimer-pulicver-v1.1.0")
         self.master.attributes("-fullscreen", True)
         self.master.configure(background="white")
         self.master.iconbitmap(default="./logo/logo3.ico")
@@ -78,7 +78,7 @@ class SoundBoard:
 
     def info(self):
         sub = tk.Toplevel(self.master)
-        sub.title("TeaChimer-pulicver-v1.1.0(beta)")
+        sub.title("TeaChimer-pulicver-v1.1.0")
         sub.overrideredirect(True)
         sub.attributes("-topmost", True)
         sub.attributes("-alpha", 0.75)
