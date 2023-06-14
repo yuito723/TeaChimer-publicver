@@ -25,12 +25,12 @@
 # along with this program. If not, see         #
 # <https://www.gnu.org/licenses/>.             #
 ################################################
-#ライセンスについて
+# ライセンスについて
 ################################################
 # TeaChimerはオープンソースソフトウェアであり、
 # GNU General Public License v3.0に基づいて
 # 再配布したり改変したりできます。
-# ©️ 2023 Contributors to the TeaChimer project.
+# (C) 2023 Contributors to the TeaChimer project.
 # また、このプログラムに付属している音声データは、
 # VOICEVOXで作成したずんだもんの音声を使用しています。
 ################################################
