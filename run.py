@@ -1,5 +1,5 @@
 ################################################
-#          TeaChimer-publicver-v1.1.0          #
+#          TeaChimer-publicver-v2.0.0          #
 ################################################
 # ©️ 2023 Contributors to the TeaChimer project #
 ################################################
@@ -45,7 +45,7 @@ import math
 class SoundBoard:
     def __init__(self, master):
         self.master = master
-        self.master.title("TeaChimer-pulicver-v1.1.0")
+        self.master.title("TeaChimer-pulicver-v2.0.0")
         self.master.attributes("-fullscreen", True)
         self.master.configure(background="white")
         self.master.iconbitmap(default="./logo/logo3.ico")
@@ -78,13 +78,13 @@ class SoundBoard:
 
     def info(self):
         sub = tk.Toplevel(self.master)
-        sub.title("TeaChimer-pulicver-v1.1.0")
+        sub.title("TeaChimer-pulicver-v2.0.0")
         sub.overrideredirect(True)
         sub.attributes("-topmost", True)
         sub.attributes("-alpha", 0.75)
         sub.configure(background="white")
 
-        window_width = 500
+        window_width = 1000
         window_height = 250
         screen_width = sub.winfo_screenwidth()
         screen_height = sub.winfo_screenheight()
@@ -92,16 +92,33 @@ class SoundBoard:
         y = math.ceil((screen_height - window_height) / 2)
         sub.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
-        sub.after(5000, sub.destroy)
+        sub.after(10000, sub.destroy)
 
         image = tk.PhotoImage(file="./logo/s-logo1.png")
         image_label = tk.Label(sub, image=image, background="white")
         image_label.image = image
-        image_label.pack()
+        image_label.grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
 
-        text = "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて再配布したり改変したりできます。\n(C) 2023 Contributors to the TeaChimer project.\nまた、このプログラムに付属している音声データは、\nVOICEVOXで作成したずんだもんの音声を使用しています。"
-        text_label = tk.Label(sub, text=text, background="white")
-        text_label.pack()
+        text = "TeaChimer-pulicver-v2.0.0"
+        text_label = tk.Label(sub, text=text, font=("Noto Sans JP", 20), background="white")
+        text_label.grid(row=1, column=0, padx=5, pady=5, sticky="nsew")
+
+        text = "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます。\n(C) 2023 Contributors to the TeaChimer project.\nまた、このプログラムに付属している音声データは、\nVOICEVOXで作成した\nずんだもんの音声を使用しています。"
+        text_label = tk.Label(sub, text=text, font=("Noto Sans JP", 15), background="white")
+        text_label.grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
+
+        text = "「Ctrl」キー＋「D」キーで終了することができます。"
+        text_label = tk.Label(sub, text=text, font=("Noto Sans JP", 15), background="white")
+        text_label.grid(row=1, column=1, padx=5, pady=5, sticky="nsew")
+
+        image_label.grid_rowconfigure(0, weight=1)
+        text_label.grid_rowconfigure(1, weight=1)
+        text_label.grid_rowconfigure(0, weight=1)
+        text_label.grid_rowconfigure(1, weight=1)
+        image_label.grid_columnconfigure(0, weight=1)
+        text_label.grid_columnconfigure(0, weight=1)
+        text_label.grid_columnconfigure(1, weight=1)
+        text_label.grid_columnconfigure(1, weight=1)
 
     def create_page1(self):
         page1 = tk.Frame(self.notebook, background="white")
