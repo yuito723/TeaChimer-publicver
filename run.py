@@ -100,24 +100,22 @@ class SoundBoard:
         image_label.grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
 
         text = "TeaChimer-pulicver-v2.0.0"
-        text_label = tk.Label(sub, text=text, font=("Noto Sans JP", 20), background="white")
+        text_label = tk.Label(sub, text=text, font=("Noto Sans JP", 25, "bold"), background="white")
         text_label.grid(row=1, column=0, padx=5, pady=5, sticky="nsew")
 
         text = "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます。\n(C) 2023 Contributors to the TeaChimer project.\nまた、このプログラムに付属している音声データは、\nVOICEVOXで作成した\nずんだもんの音声を使用しています。"
-        text_label = tk.Label(sub, text=text, font=("Noto Sans JP", 15), background="white")
+        text_label = tk.Label(sub, text=text, font=("Noto Sans JP", 13, "bold"), background="white")
         text_label.grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
 
         text = "「Ctrl」キー＋「D」キーで終了することができます。"
-        text_label = tk.Label(sub, text=text, font=("Noto Sans JP", 15), background="white")
+        text_label = tk.Label(sub, text=text, font=("Noto Sans JP", 15, "italic", "bold"), background="white")
         text_label.grid(row=1, column=1, padx=5, pady=5, sticky="nsew")
 
         image_label.grid_rowconfigure(0, weight=1)
         text_label.grid_rowconfigure(1, weight=1)
         text_label.grid_rowconfigure(0, weight=1)
-        text_label.grid_rowconfigure(1, weight=1)
         image_label.grid_columnconfigure(0, weight=1)
         text_label.grid_columnconfigure(0, weight=1)
-        text_label.grid_columnconfigure(1, weight=1)
         text_label.grid_columnconfigure(1, weight=1)
 
     def create_page1(self):
