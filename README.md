@@ -1,4 +1,4 @@
-![logo](./logo/logo1.svg)
+![logo](./logo/logo1.png)
 ![last commit](https://img.shields.io/github/last-commit/cyber-yuito723/TeaChimer-publicver?style=flat-square)
 ![repo size](https://img.shields.io/github/repo-size/cyber-yuito723/TeaChimer-publicver?style=flat-square)
 [](![downloads](https://img.shields.io/github/downloads/cyber-yuito723/TeaChimer-publicver/total?style=flat-square))
@@ -27,7 +27,7 @@
 |バージョン|リリース日|
 |:---:|:---:|
 |[v1.0.0](https://github.com/cyber-yuito723/TeaChimer-publicver/releases/tag/v1.0.0)|２０２３年５月２５日|
-|[v1.0.0](https://github.com/cyber-yuito723/TeaChimer-publicver/releases/tag/v2.0.0)|２０２３年６月１７日|
+|[v2.0.0](https://github.com/cyber-yuito723/TeaChimer-publicver/releases/tag/v2.0.0)|２０２３年６月１７日|
 
 
 ## 動作要件
