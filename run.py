@@ -45,7 +45,7 @@ import math
 class SoundBoard:
     def __init__(self, master):
         self.master = master
-        self.master.title("TeaChimer-pulicver-v2.0.0")
+        self.master.title("TeaChimer-publicver-v2.0.0")
         self.master.attributes("-fullscreen", True)
         self.master.configure(background="white")
         self.master.iconbitmap(default="./logo/logo3.ico")
@@ -78,7 +78,7 @@ class SoundBoard:
 
     def info(self):
         sub = tk.Toplevel(self.master)
-        sub.title("TeaChimer-pulicver-v2.0.0")
+        sub.title("TeaChimer-publicver-v2.0.0")
         sub.overrideredirect(True)
         sub.attributes("-topmost", True)
         sub.attributes("-alpha", 0.75)
@@ -99,7 +99,7 @@ class SoundBoard:
         image_label.image = image
         image_label.grid(row=0, column=0, padx=5, pady=5)
 
-        text = "TeaChimer-pulicver-v2.0.0"
+        text = "TeaChimer-publicver-v2.0.0"
         text_label = tk.Label(sub, text=text, font=("Noto Sans JP", 25, "bold"), background="white")
         text_label.grid(row=1, column=0, padx=5, pady=5)
 
