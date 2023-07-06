@@ -19,7 +19,7 @@
 　このPythonプログラムは、オープンソースソフトウェアであり、[GNU General Public License v3.0](https://github.com/cyber-yuito723/TeaChimer-publicver/blob/main/LICENSE)に基づいて再配布したり改変したりできます。
 また、GPLライセンスのため、利用する場合は以下のクレジット表記を追加してください。
 ```
-©️ 2023 Contributors to the TeaChimer project
+(C) 2023 Contributors to the TeaChimer project
 ```
 
 
