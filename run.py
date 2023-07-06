@@ -1,39 +1,39 @@
-################################################
-#          TeaChimer-publicver-v2.0.0          #
-################################################
-# ©️ 2023 Contributors to the TeaChimer project #
-################################################
-# TeaChimer is free software:                  #
-# you can redistribute it and/or modify it     #
-# under the terms of                           #
-# the GNU General Public License as published  #
-# by the Free Software Foundation,             #
-# either version 3 of the License,             #
-# or (at your option) any later version.       #
-#                                              #
-# This program is distributed in the hope      #
-# that it will be useful,                      #
-# but WITHOUT ANY WARRANTY;                    #
-# without even the implied warranty            #
-# of MERCHANTABILITY or FITNESS                #
-# FOR A PARTICULAR PURPOSE.                    #
-# See the GNU General Public License           #
-# for more details.                            #
-#                                              #
-# You should have received a copy of           #
-# the GNU General Public License               #
-# along with this program. If not, see         #
-# <https://www.gnu.org/licenses/>.             #
-################################################
+##################################################
+#           TeaChimer-publicver-v2.0.1           #
+##################################################
+# (C) 2023 Contributors to the TeaChimer project #
+##################################################
+# TeaChimer is free software:                    #
+# you can redistribute it and/or modify it       #
+# under the terms of                             #
+# the GNU General Public License as published    #
+# by the Free Software Foundation,               #
+# either version 3 of the License,               #
+# or (at your option) any later version.         #
+#                                                #
+# This program is distributed in the hope        #
+# that it will be useful,                        #
+# but WITHOUT ANY WARRANTY;                      #
+# without even the implied warranty              #
+# of MERCHANTABILITY or FITNESS                  #
+# FOR A PARTICULAR PURPOSE.                      #
+# See the GNU General Public License             #
+# for more details.                              #
+#                                                #
+# You should have received a copy of             #
+# the GNU General Public License                 #
+# along with this program. If not, see           #
+# <https://www.gnu.org/licenses/>.               #
+##################################################
 # ライセンスについて
-################################################
+##################################################
 # TeaChimerはオープンソースソフトウェアであり、
 # GNU General Public License v3.0に基づいて
 # 再配布したり改変したりできます。
 # (C) 2023 Contributors to the TeaChimer project.
 # また、このプログラムに付属している音声データは、
 # VOICEVOXで作成したずんだもんの音声を使用しています。
-################################################
+##################################################
 
 import tkinter as tk
 import tkinter.ttk as ttk
@@ -45,7 +45,7 @@ import math
 class SoundBoard:
     def __init__(self, master):
         self.master = master
-        self.master.title("TeaChimer-publicver-v2.0.0")
+        self.master.title("TeaChimer-publicver-v2.0.1")
         self.master.attributes("-fullscreen", True)
         self.master.configure(background="white")
         self.master.iconbitmap(default="./logo/logo3.ico")
@@ -78,7 +78,7 @@ class SoundBoard:
 
     def info(self):
         sub = tk.Toplevel(self.master)
-        sub.title("TeaChimer-publicver-v2.0.0")
+        sub.title("TeaChimer-publicver-v2.0.1")
         sub.overrideredirect(True)
         sub.attributes("-topmost", True)
         sub.attributes("-alpha", 0.75)
@@ -99,7 +99,7 @@ class SoundBoard:
         image_label.image = image
         image_label.grid(row=0, column=0, padx=5, pady=5)
 
-        text = "TeaChimer-publicver-v2.0.0"
+        text = "TeaChimer-publicver-v2.0.1"
         text_label = tk.Label(sub, text=text, font=("Noto Sans JP", 25, "bold"), background="white")
         text_label.grid(row=1, column=0, padx=5, pady=5)
 
@@ -560,7 +560,7 @@ class SoundBoard:
         self.master.bind("<Control-e>", self.confirm_exit)
 
     def confirm_exit(self ,event):
-        result = mbox.askyesno("終了する", "TeaChimerを終了しますか？")
+        result = mbox.askyesno("TeaChimer-publicver-v2.0.1", "TeaChimerを終了しますか？")
         if result:
             self.master.destroy()
 
