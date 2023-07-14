@@ -568,7 +568,7 @@ class SoundBoard:
         pygame.mixer.init()
         pygame.mixer.music.load(file)
         pygame.mixer.music.play()
-        time.sleep(3)
+        time.sleep(4)
         pygame.mixer.music.play()
 
 root = tk.Tk()
