@@ -1,5 +1,5 @@
 ##################################################
-#           TeaChimer-publicver-v2.0.1           #
+#           TeaChimer-publicver-v2.0.2           #
 ##################################################
 # (C) 2023 Contributors to the TeaChimer project #
 ##################################################
@@ -45,7 +45,7 @@ import math
 class SoundBoard:
     def __init__(self, master):
         self.master = master
-        self.master.title("TeaChimer-publicver-v2.0.1")
+        self.master.title("TeaChimer-publicver-v2.0.2")
         self.master.attributes("-fullscreen", True)
         self.master.configure(background="white")
         self.master.iconbitmap(default="./system/logo3.ico")
@@ -78,7 +78,7 @@ class SoundBoard:
 
     def info(self):
         sub = tk.Toplevel(self.master)
-        sub.title("TeaChimer-publicver-v2.0.1")
+        sub.title("TeaChimer-publicver-v2.0.2")
         sub.overrideredirect(True)
         sub.attributes("-topmost", True)
         sub.attributes("-alpha", 0.75)
@@ -99,7 +99,7 @@ class SoundBoard:
         image_label.image = image
         image_label.grid(row=0, column=0, padx=5, pady=5)
 
-        text = "TeaChimer-publicver-v2.0.1"
+        text = "TeaChimer-publicver-v2.0.2"
         text_label = tk.Label(sub, text=text, font=("Noto Sans JP", 25, "bold"), background="white")
         text_label.grid(row=1, column=0, padx=5, pady=5)
 
@@ -107,7 +107,7 @@ class SoundBoard:
         text_label = tk.Label(sub, text=text, font=("Noto Sans JP", 13, "bold"), background="white")
         text_label.grid(row=0, column=1, padx=5, pady=5)
 
-        text = "このプログラムは「Ctrl」キー＋「e」キーで\n終了することができます。"
+        text = "このプログラムは「Ctrl」キー＋「Q」キーで\n終了することができます。"
         text_label = tk.Label(sub, text=text, font=("Noto Sans JP", 13, "italic", "bold"), background="white")
         text_label.grid(row=1, column=1, padx=5, pady=5)
 
@@ -557,10 +557,10 @@ class SoundBoard:
         tk.Message(frame, text="音声が流れている間は他のボタンを押さないでください。", background="white", font=("Noto Sans JP", 20), width="1000").grid(row=0, column=1, padx=5, pady=5)
 
     def key_exit(self):
-        self.master.bind("<Control-e>", self.confirm_exit)
+        self.master.bind("<Control-q>", self.confirm_exit)
 
     def confirm_exit(self ,event):
-        result = mbox.askyesno("TeaChimer-publicver-v2.0.1", "TeaChimerを終了しますか？")
+        result = mbox.askyesno("TeaChimer-publicver-v2.0.2", "TeaChimerを終了しますか？")
         if result:
             self.master.destroy()
 
