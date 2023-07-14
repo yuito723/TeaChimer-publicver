@@ -48,7 +48,7 @@ class SoundBoard:
         self.master.title("TeaChimer-publicver-v2.0.1")
         self.master.attributes("-fullscreen", True)
         self.master.configure(background="white")
-        self.master.iconbitmap(default="./logo/logo3.ico")
+        self.master.iconbitmap(default="./system/logo3.ico")
         self.master.focus_force()
 
         self.notebook = ttk.Notebook(self.master)
@@ -94,7 +94,7 @@ class SoundBoard:
 
         sub.after(7000, sub.destroy)
 
-        image = tk.PhotoImage(file="./logo/s-logo1.png")
+        image = tk.PhotoImage(file="./system/s-logo1.png")
         image_label = tk.Label(sub, image=image, background="white")
         image_label.image = image
         image_label.grid(row=0, column=0, padx=5, pady=5)
