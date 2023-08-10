@@ -28,6 +28,7 @@
 |[v2.0.0](https://github.com/cyber-yuito723/TeaChimer-publicver/releases/tag/v2.0.0)|２０２３年６月１７日|以前のリリースからのアップデートになります。|
 |[v2.0.1](https://github.com/cyber-yuito723/TeaChimer-publicver/releases/tag/v2.0.1)|２０２３年７月６日|軽微なアップデートになります。|
 |[v2.0.2](https://github.com/cyber-yuito723/TeaChimer-publicver/releases/tag/v2.0.2)|２０２３年７月１４日|利便性をさらに向上させるためのアップデートになります。|
+|[v2.0.3](https://github.com/cyber-yuito723/TeaChimer-publicver/releases/tag/v2.0.3)|２０２３年８月１０日|ロゴの変更になります。|
 
 
 ## 動作要件
