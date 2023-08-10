@@ -560,8 +560,7 @@ class SoundBoard:
         self.master.bind("<Control-q>", self.confirm_exit)
 
     def confirm_exit(self ,event):
-        result = mbox.askyesno("TeaChimer-publicver-v2.0.3", "TeaChimerを終了しますか？")
-        if result:
+        if mbox.askyesno("TeaChimer-publicver-v2.0.3", "TeaChimerを終了しますか？"):
             self.master.destroy()
 
     def play_sound(self, file):
