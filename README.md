@@ -1,4 +1,4 @@
-![logo](./logo/old/logo1.svg)
+![logo](./logo/logo-2.png)
 ![last commit](https://img.shields.io/github/last-commit/cyber-yuito723/TeaChimer-publicver?style=flat-square)
 
 **最終更新日：２０２３年８月１０日**
