@@ -46,7 +46,7 @@ class SoundBoard:
     def __init__(self, master):
         self.master = master
         self.master.title("TeaChimer-publicver-v2.0.3")
-        #self.master.attributes("-fullscreen", True)
+        self.master.attributes("-fullscreen", True)
         self.master.configure(background="white")
         self.master.iconbitmap(default="./system/logo-1_icon.ico")
         self.master.focus_force()
@@ -81,7 +81,7 @@ class SoundBoard:
         sub.title("TeaChimer-publicver-v2.0.3")
         sub.overrideredirect(True)
         sub.attributes("-topmost", True)
-        #sub.attributes("-alpha", 0.75)
+        sub.attributes("-alpha", 0.75)
         sub.configure(background="white")
 
         window_width = 1000
