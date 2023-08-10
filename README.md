@@ -1,7 +1,5 @@
 ![logo](./logo/old/logo1.svg)
 ![last commit](https://img.shields.io/github/last-commit/cyber-yuito723/TeaChimer-publicver?style=flat-square)
-[](![repo size](https://img.shields.io/github/repo-size/cyber-yuito723/TeaChimer-publicver?style=flat-square))
-[](![downloads](https://img.shields.io/github/downloads/cyber-yuito723/TeaChimer-publicver/total?style=flat-square))
 
 **最終更新日：２０２３年８月７日**
 # TeaChimer-publicver
