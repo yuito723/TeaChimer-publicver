@@ -46,9 +46,9 @@ class SoundBoard:
     def __init__(self, master):
         self.master = master
         self.master.title("TeaChimer-publicver-v2.0.3")
-        self.master.attributes("-fullscreen", True)
+        #self.master.attributes("-fullscreen", True)
         self.master.configure(background="white")
-        self.master.iconbitmap(default="./system/logo3.ico")
+        self.master.iconbitmap(default="./system/logo-1_icon.ico")
         self.master.focus_force()
 
         self.notebook = ttk.Notebook(self.master)
@@ -81,7 +81,7 @@ class SoundBoard:
         sub.title("TeaChimer-publicver-v2.0.3")
         sub.overrideredirect(True)
         sub.attributes("-topmost", True)
-        sub.attributes("-alpha", 0.75)
+        #sub.attributes("-alpha", 0.75)
         sub.configure(background="white")
 
         window_width = 1000
@@ -94,7 +94,7 @@ class SoundBoard:
 
         sub.after(7000, sub.destroy)
 
-        image = tk.PhotoImage(file="./system/s-logo1.png")
+        image = tk.PhotoImage(file="./system/logo-2_small.png")
         image_label = tk.Label(sub, image=image, background="white")
         image_label.image = image
         image_label.grid(row=0, column=0, padx=5, pady=5)
