@@ -78,7 +78,7 @@ class Main():
         ver_label = ttk.Label(startup_frame, text = ver, style = "startup_ver.TLabel")
         ver_label.place(x = 0, y = 100, width = 300 + 20, height = 150 - 100)
 
-        text = "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます\n(C) 2023 cyber-yuito723\nヘルプ画面：「Ctrl」キー＋「H」キー"
+        text = "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます\n(C) 2023 Contributors to the TeaChimer project\nヘルプ画面：「Ctrl」キー＋「H」キー"
         text_label = ttk.Label(startup_frame, text = text, style = "startup_notice.TLabel")
         text_label.place(x = 300 + 20, y = 0, width = 700 - 300 - 20, height = 150)
 
@@ -717,6 +717,6 @@ class Main():
 root = tk.Tk()
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
-version = "v3.0.0"
+version = "publicver-v3.0.0"
 app = Main(root)
 root.mainloop()
