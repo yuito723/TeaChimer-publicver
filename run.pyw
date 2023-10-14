@@ -45,7 +45,7 @@ class Main():
         startup.title(f"TeaChimer-{version}_STARTUP")
         startup.configure(background = "whitesmoke")
 
-        startup.after(60000, startup.destroy)
+        startup.after(7000, startup.destroy)
 
         startup_frame = ttk.Frame(startup, style = "TFrame")
         startup_frame.place(x = (screen_width - 800) / 2, y = (screen_height - 150) / 2, width = 800, height = 150)
