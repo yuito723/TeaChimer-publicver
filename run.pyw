@@ -23,8 +23,7 @@ class Main():
         style.theme_use("clam")
         style.configure("TFrame", background = "white")
         style.configure("TLabel", font = ("Yu Gothic UI", 15), anchor = "center", background = "white")
-        style.configure("startup_ver.TLabel", font = ("Yu Gothic UI", 25, "bold"), anchor = "center", background = "white")
-        style.configure("startup_notice.TLabel", font = ("Yu Gothic UI", 15), anchor = "center", background = "white")
+        style.configure("startup_ver.TLabel", font = ("Yu Gothic UI", 20, "bold"), anchor = "center", background = "white")
         style.configure("logo.TLabel", background = "white")
         style.configure("notice.TLabel", font = ("Yu Gothic UI", 30, "bold"), anchor = "center", background = "white")
         style.configure("TButton", font = ("Yu Gothic UI", 25, "bold"), background = "whitesmoke")
@@ -46,23 +45,23 @@ class Main():
         startup.title(f"TeaChimer-{version}_STARTUP")
         startup.configure(background = "whitesmoke")
 
-        startup.after(7000, startup.destroy)
+        startup.after(60000, startup.destroy)
 
         startup_frame = ttk.Frame(startup, style = "TFrame")
-        startup_frame.place(x = (screen_width - 700) / 2, y = (screen_height - 150) / 2, width = 700, height = 150)
+        startup_frame.place(x = (screen_width - 800) / 2, y = (screen_height - 150) / 2, width = 800, height = 150)
 
         logo = tk.PhotoImage(file = "./system/logo-2_small.png")
         logo_label = ttk.Label(startup_frame, image = logo, style = "logo.TLabel")
-        logo_label.place(x = 0, y = 0, width = 300 + 20, height = 100)
+        logo_label.place(x = 0, y = 0, width = 300 + 70, height = 100)
         logo_label.image = logo
 
         ver = f"TeaChimer-{version}"
         ver_label = ttk.Label(startup_frame, text = ver, style = "startup_ver.TLabel")
-        ver_label.place(x = 0, y = 100, width = 300 + 20, height = 150 - 100)
+        ver_label.place(x = 0, y = 100, width = 300 + 70, height = 150 - 100)
 
-        text = "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます\n(C) 2023 Contributors to the TeaChimer project\nヘルプ画面：「Ctrl」キー＋「H」キー"
-        text_label = ttk.Label(startup_frame, text = text, style = "startup_notice.TLabel")
-        text_label.place(x = 300 + 20, y = 0, width = 700 - 300 - 20, height = 150)
+        text = "TeaChimerはオープンソースソフトウェアであり、\nGNU General Public License v3.0に基づいて\n再配布したり改変したりできます\n(C) 2023 Contributors to the TeaChimer project\n終了：「Ctrl」キー＋「Q」キー"
+        text_label = ttk.Label(startup_frame, text = text, style = "TLabel")
+        text_label.place(x = 300 + 70, y = 0, width = 800 - 300 - 70, height = 150)
 
     def header(self):
         header = ttk.Frame(style = "TFrame")
