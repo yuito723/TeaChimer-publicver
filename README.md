@@ -8,7 +8,7 @@
 
 ## 概要
 　このPythonプログラムは、学校の職員室おいて生徒が教員の呼び出しをスムーズに行うために開発しているものです。
- TeaChimerの旧バージョンになります。新バージョンは[こちら](https://github.com/cyber-yuito723/TeaChimer)。
+ TeaChimerの旧エディションになります。新エディションは[こちら](https://github.com/cyber-yuito723/TeaChimer)。
 
 
 ## ライセンスについて
