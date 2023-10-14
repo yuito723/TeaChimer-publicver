@@ -25,6 +25,7 @@ class Main():
     def __init__(self, master):
         self.master = master
         self.master.attributes("-fullscreen", True)
+        self.master.attributes("-topmost", True)
         self.master.iconbitmap("./system/logo-1_icon.ico")
         self.master.title(f"TeaChimer-{version}_MAIN")
         self.master.configure(background = "white")
@@ -37,10 +38,8 @@ class Main():
         style.configure("startup_ver.TLabel", font = ("Yu Gothic UI", 25, "bold"), anchor = "center", background = "white")
         style.configure("startup_notice.TLabel", font = ("Yu Gothic UI", 15), anchor = "center", background = "white")
         style.configure("logo.TLabel", background = "white")
-        style.configure("ver.TLabel", font = ("Yu Gothic UI", 15), anchor = "center", background = "white")
         style.configure("notice.TLabel", font = ("Yu Gothic UI", 30, "bold"), anchor = "center", background = "white")
-        style.configure("TButton", font = ("Yu Gothic UI", 20, "bold"), background = "whitesmoke")
-        style.configure("yesno.TButton", font = ("Yu Gothic UI", 30, "bold"), background = "whitesmoke")
+        style.configure("TButton", font = ("Yu Gothic UI", 25, "bold"), background = "whitesmoke")
         style.map("TButton", background = [("active", "whitesmoke"), ("disabled", "lightgray")])
 
         self.startup()
@@ -59,7 +58,7 @@ class Main():
         startup.title(f"TeaChimer-{version}_STARTUP")
         startup.configure(background = "whitesmoke")
 
-        startup.after(3000, startup.destroy)
+        startup.after(7000, startup.destroy)
 
         startup_frame = ttk.Frame(startup, style = "TFrame")
         startup_frame.place(x = (screen_width - 700) / 2, y = (screen_height - 150) / 2, width = 700, height = 150)
@@ -87,7 +86,7 @@ class Main():
         logo_label.image = logo
 
         ver = f"TeaChimer-{version}\n{school_name}\n{admin_name}"
-        ver_label = ttk.Label(header, text = ver, style = "ver.TLabel")
+        ver_label = ttk.Label(header, text = ver, style = "TLabel")
         ver_label.place(x = 10 + 300 + 10, y = 0, width = 300, height = 100)
 
         text = "呼びたい先生のボタンを押してください"
@@ -128,16 +127,16 @@ class Main():
         ttk.Button(main, text = "", state = "", command = lambda: self.confirm("", ""), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
         ttk.Button(main, text = "", state = "", command = lambda: self.confirm("", ""), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
 
-        main.grid_rowconfigure(0, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main.grid_rowconfigure(1, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main.grid_rowconfigure(2, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main.grid_rowconfigure(3, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main.grid_rowconfigure(4, minsize = (screen_height - 100 - 30 - 10 * 6) / 5, weight = 1)
-        main.grid_columnconfigure(0, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main.grid_columnconfigure(1, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main.grid_columnconfigure(2, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main.grid_columnconfigure(3, minsize = (screen_width - 10 * 6) / 5, weight = 1)
-        main.grid_columnconfigure(4, minsize = (screen_width - 10 * 6) / 5, weight = 1)
+        main.grid_rowconfigure(0, minsize = button_height, weight = 1)
+        main.grid_rowconfigure(1, minsize = button_height, weight = 1)
+        main.grid_rowconfigure(2, minsize = button_height, weight = 1)
+        main.grid_rowconfigure(3, minsize = button_height, weight = 1)
+        main.grid_rowconfigure(4, minsize = button_height, weight = 1)
+        main.grid_columnconfigure(0, minsize = button_width, weight = 1)
+        main.grid_columnconfigure(1, minsize = button_width, weight = 1)
+        main.grid_columnconfigure(2, minsize = button_width, weight = 1)
+        main.grid_columnconfigure(3, minsize = button_width, weight = 1)
+        main.grid_columnconfigure(4, minsize = button_width, weight = 1)
 
     def confirm(self, name, path):
         confirm = tk.Toplevel()
@@ -155,20 +154,20 @@ class Main():
         logo_label.image = logo
 
         ver = f"TeaChimer-{version}\n{school_name}\n{admin_name}"
-        ver_label = ttk.Label(confirm, text = ver, style = "ver.TLabel")
+        ver_label = ttk.Label(confirm, text = ver, style = "TLabel")
         ver_label.place(x = 10 + 300 + 10, y = 0, width = 300, height = 100)
 
         text = f"{name}を呼びますか？"
         text_label = ttk.Label(confirm, text = text, style = "notice.TLabel")
-        text_label.place(x = (screen_width - 700) / 2, y = 100 + (screen_height - 100 - 300) / 2, width = 700, height = 100)
+        text_label.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + ((screen_height - 100 - 50 - 10 - button_height) / 2), width = (button_width * 2) + 10, height = 50 + 10)
 
         text = "はい"
-        button = ttk.Button(confirm, text = text, command = lambda: self.playsound(confirm, name, path), style = "yesno.TButton")
-        button.place(x = (screen_width - 700) / 2, y = 100 + (screen_height - 100 - 300) / 2 + 100, width = (700 - 10) / 2, height = 300 - 100)
+        button = ttk.Button(confirm, text = text, command = lambda: self.playsound(confirm, name, path), style = "TButton")
+        button.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + ((screen_height - 100 - 50 - 10 - button_height) / 2) + 50 + 10, width = button_width, height = button_height)
 
         text = "いいえ"
-        button = ttk.Button(confirm, text = text, command = confirm.destroy, style = "yesno.TButton")
-        button.place(x = (screen_width - 700) / 2 + 10 + (700 - 10 * 3) / 2 + 10, y = 100 + (screen_height - 100 - 300) / 2 + 100, width = (700 - 10) / 2, height = 300 - 100)
+        button = ttk.Button(confirm, text = text, command = confirm.destroy, style = "TButton")
+        button.place(x = ((screen_width - button_width * 2 - 10) / 2) + button_width + 10, y = 100 + ((screen_height - 100 - 50 - 10 - button_height) / 2) + 50 + 10, width = button_width, height = button_height)
 
     def playsound(self, confirm, name, path):
         playsound = tk.Toplevel()
@@ -186,7 +185,7 @@ class Main():
         logo_label.image = logo
 
         ver = f"TeaChimer-{version}\n{school_name}\n{admin_name}"
-        ver_label = ttk.Label(playsound, text = ver, style = "ver.TLabel")
+        ver_label = ttk.Label(playsound, text = ver, style = "TLabel")
         ver_label.place(x = 10 + 300 + 10, y = 0, width = 300, height = 100)
 
         text = f"{name}を呼んでいます"
@@ -217,24 +216,26 @@ class Main():
         logo_label.image = logo
 
         ver = f"TeaChimer-{version}\n{school_name}\n{admin_name}"
-        ver_label = ttk.Label(exit, text = ver, style = "ver.TLabel")
+        ver_label = ttk.Label(exit, text = ver, style = "TLabel")
         ver_label.place(x = 10 + 300 + 10, y = 0, width = 300, height = 100)
 
         text = "TeaChimerを終了しますか？"
         text_label = ttk.Label(exit, text = text, style = "notice.TLabel")
-        text_label.place(x = (screen_width - 700) / 2, y = 100 + (screen_height - 100 - 300) / 2, width = 700, height = 100)
+        text_label.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + ((screen_height - 100 - 50 - 10 - button_height) / 2), width = (button_width * 2) + 10, height = 50 + 10)
 
         text = "はい"
-        button = ttk.Button(exit, text = text, command = self.master.destroy, style = "yesno.TButton")
-        button.place(x = (screen_width - 700) / 2, y = 100 + (screen_height - 100 - 300) / 2 + 100, width = (700 - 10) / 2, height = 300 - 100)
+        button = ttk.Button(exit, text = text, command = self.master.destroy, style = "TButton")
+        button.place(x = (screen_width - button_width * 2 - 10) / 2, y = 100 + ((screen_height - 100 - 50 - 10 - button_height) / 2) + 50 + 10, width = button_width, height = button_height)
 
         text = "いいえ"
-        button = ttk.Button(exit, text = text, command = exit.destroy, style = "yesno.TButton")
-        button.place(x = (screen_width - 700) / 2 + 10 + (700 - 10 * 3) / 2 + 10, y = 100 + (screen_height - 100 - 300) / 2 + 100, width = (700 - 10) / 2, height = 300 - 100)
+        button = ttk.Button(exit, text = text, command = exit.destroy, style = "TButton")
+        button.place(x = ((screen_width - button_width * 2 - 10) / 2) + button_width + 10, y = 100 + ((screen_height - 100 - 50 - 10 - button_height) / 2) + 50 + 10, width = button_width, height = button_height)
 
 root = tk.Tk()
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
+button_width = (screen_width - 10 * 6) / 5
+button_height = (screen_height - 100 - 10 * 6) / 5
 version = "publicver-v3.0.0"
 school_name = "学校名"
 admin_name = "管理者名"
