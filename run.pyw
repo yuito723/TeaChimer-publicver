@@ -97,7 +97,7 @@ class Main():
         text_label.place(x = 10 + 300 + 10 + 300, y = 0, width = screen_width - 10 - 300 - 10 - 300, height = 100)
 
     def main(self):
-        main = ttk.Frame(main, padding = 5, style = "TFrame")
+        main = ttk.Frame(padding = 5, style = "TFrame")
         main.place(x = 0, y = 100, width = screen_width, height = screen_height - 100)
 
         ttk.Button(main, text = "", state = "", command = lambda: self.confirm("", ""), style = "TButton").grid(row = 0, column = 0, padx = 5, pady = 5, sticky = "nsew")
