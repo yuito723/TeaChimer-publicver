@@ -41,7 +41,6 @@ class Main():
         style.configure("notice.TLabel", font = ("Yu Gothic UI", 30, "bold"), anchor = "center", background = "white")
         style.configure("TButton", font = ("Yu Gothic UI", 20, "bold"), background = "whitesmoke")
         style.configure("yesno.TButton", font = ("Yu Gothic UI", 30, "bold"), background = "whitesmoke")
-        style.map("TNotebook.Tab", background = [("selected", "white")])
         style.map("TButton", background = [("active", "whitesmoke"), ("disabled", "lightgray")])
 
         self.startup()
@@ -50,7 +49,6 @@ class Main():
         self.main()
 
         self.master.bind("<Control-q>", self.exit)
-        self.master.bind("<Control-h>", self.open_help)
 
     def startup(self):
         startup = tk.Toplevel()
@@ -234,14 +232,11 @@ class Main():
         button = ttk.Button(exit, text = text, command = exit.destroy, style = "yesno.TButton")
         button.place(x = (screen_width - 700) / 2 + 10 + (700 - 10 * 3) / 2 + 10, y = 100 + (screen_height - 100 - 300) / 2 + 100, width = (700 - 10) / 2, height = 300 - 100)
 
-    def open_help(self, event):
-        self.help()
-
 root = tk.Tk()
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 version = "publicver-v3.0.0"
-school_name = ""
-admin_name = ""
+school_name = "学校名"
+admin_name = "管理者名"
 app = Main(root)
 root.mainloop()
