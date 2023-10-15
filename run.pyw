@@ -114,11 +114,18 @@ class Main():
         ttk.Button(main, text = "先生", state = "先生", command = lambda: self.confirm("先生", "./system/sample.wav"), style = "TButton").grid(row = 4, column = 3, padx = 5, pady = 5, sticky = "nsew")
         ttk.Button(main, text = "先生", state = "先生", command = lambda: self.confirm("先生", "./system/sample.wav"), style = "TButton").grid(row = 4, column = 4, padx = 5, pady = 5, sticky = "nsew")
 
+        ttk.Button(main, text = "先生", state = "先生", command = lambda: self.confirm("先生", "./system/sample.wav"), style = "TButton").grid(row = 5, column = 0, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(main, text = "先生", state = "先生", command = lambda: self.confirm("先生", "./system/sample.wav"), style = "TButton").grid(row = 5, column = 1, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(main, text = "先生", state = "先生", command = lambda: self.confirm("先生", "./system/sample.wav"), style = "TButton").grid(row = 5, column = 2, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(main, text = "先生", state = "先生", command = lambda: self.confirm("先生", "./system/sample.wav"), style = "TButton").grid(row = 5, column = 3, padx = 5, pady = 5, sticky = "nsew")
+        ttk.Button(main, text = "先生", state = "先生", command = lambda: self.confirm("先生", "./system/sample.wav"), style = "TButton").grid(row = 5, column = 4, padx = 5, pady = 5, sticky = "nsew")
+
         main.grid_rowconfigure(0, minsize = button_height, weight = 1)
         main.grid_rowconfigure(1, minsize = button_height, weight = 1)
         main.grid_rowconfigure(2, minsize = button_height, weight = 1)
         main.grid_rowconfigure(3, minsize = button_height, weight = 1)
         main.grid_rowconfigure(4, minsize = button_height, weight = 1)
+        main.grid_rowconfigure(5, minsize = button_height, weight = 1)
         main.grid_columnconfigure(0, minsize = button_width, weight = 1)
         main.grid_columnconfigure(1, minsize = button_width, weight = 1)
         main.grid_columnconfigure(2, minsize = button_width, weight = 1)
@@ -222,7 +229,7 @@ root = tk.Tk()
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 button_width = (screen_width - 10 * 6) / 5
-button_height = (screen_height - 100 - 10 * 6) / 5
+button_height = (screen_height - 100 - 10 * 7) / 6
 version = "publicver-v3.0.0"
 school_name = "学校名"
 admin_name = "管理者名"
